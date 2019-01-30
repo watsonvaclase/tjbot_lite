@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123003509-1"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'UA-123003509-1');
+    </script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TJBot - El pequeño Robot de IBM con Inteligencia Artificial</title>
+    <meta name="description" content="TJBot is a cute carton or 3D printed robot , designed in IBM Labs, which you can easily build on your own. He runs on Raspberry Pi and he is a great illustration of modern technologies such as Artificial Intelligence, Iot, Cloud and more. TJBot CZ for all makers, geeks and fans of electronics!">
+    <meta name="keywords" content="robot, toy, IBM, artificial inteligence, arduino, AI, cloud, NodeJs, IoT, 3D print, TJBot, TJBot CZ, Raspberry Pi">
+    <meta name="robots" content="index, follow">
+    <meta name="DC.title" content="TJBot is a cute carton or 3D printed robot , designed in IBM Labs, which you can easily build on your own.">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="files/css/bootstrap.min.css" >
+    <!-- Icon -->
+    <!-- <link rel="stylesheet" type="text/css" href="files/fonts/line-icons.css"> -->
+    <!-- Slicknav responsive mobile menu-->
+    <link rel="stylesheet" type="text/css" href="files/css/slicknav.css">
+    <!-- Nivo Lightbox -->
+    <link rel="stylesheet" type="text/css" href="files/css/nivo-lightbox.css" >
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="files/css/animate.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="files/css/main.css">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="files/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Atma|Averia+Gruesa+Libre|Black+Ops+One|Chelsea+Market|Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar">
+        <div class="container">
+          <!-- Video and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <!-- <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span> -->
+            </button>
+            <a href="https://www.youtube.com/embed/t0vdWKfEhd8?rel=0&amp;showinfo=0" class="navbar-video"><i class="fab fa-youtube"></i></a>
+
+
+          </div>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="navbar-nav mr-auto w-100 justify-content-center">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#kdo_jsem">Quién soy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#co_umim">Qué hago</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#hotove_programy">Prouestas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#moje_souprava">Componentes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#moji_kamaradi">Mis amigos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#dotazy">Preguntas</a>
+              </li>
+              <!--<li class="nav-item">
+                  <a class="nav-link" href="events.html">Rande-vous!</a>
+                </li>-->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Start -->
+        <ul class="mobile-menu">
+          <li>
+            <a class="page-scrool" href="#">Home</a>
+          </li>
+          <li>
+            <a class="page-scrool" href="#kdo_jsem">Quién soy</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#co_umim">Qué hago</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#hotove_programy">Propuestas</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#moje_souprava">Componentes</a>
+          </li>
+            <a class="page-scroll" href="#moji_kamaradi">Mis amigos</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#dotazy">Preguntas</a>
+          </li>
+          <li>
+              <!-- <a class="page-scroll" href="events.html">Rande-vous!</a>
+            </li>-->
+        </ul>
+        <!-- Mobile Menu End -->
+
+        <!--Language Switchers-->
+
+        <div class="lang-switch-area">
+          <ul class="lang-switch">
+            <li><a href="index.html"><img src="./files/img/esp.png"></a></li>
+            <li><a href="en.html"><img src="./files/img/eng.png"></a></li>
+          </ul>
+        </div>
+
+
+        <!--Language Switchers End-->
+
+      </nav>
+      <!-- Navbar End -->
+    <div class="spacer">
+      &nbsp;
+    </div>
+
+    <div class="banner">
+      <img src="files/img/tj.png" class="center" width="400" height="400">
+     </div>
+      <div class="three-steps">
+            <h2 class="wow fadeInUp">Proyecto que lleva la Inteligencia Artificial a la Educación</h2>
+            <h1 class="wow fadeInUp">&nbsp;</h1>
+            <h2 class="wow fadeInUp">Fácil &nbsp;, En sólo tres pasos:</h2>
+            <br> <br>
+            <p class="fadeInUp  wow" data-wow-delay="0.2s"></p>
+            <div class="row">
+              <div class="col-md-6 col-lg-4 col-xs-12">
+                <h2>1. </h2>
+                <div class="btn wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="#moje_souprava" class="btn btn-border">Montaje</a>
+              </div>
+              </div>
+              <div class="col-md-6 col-lg-4 col-xs-12">
+                  <h2>2.</h2>
+                <div class="btn wow fadeInUp" data-wow-delay="0.2s">
+                <a href="#co_umim" class="btn btn-border">Código</a>
+              </div>
+              </div>
+              <div class="col-md-6 col-lg-4 col-xs-12">
+                  <h2>3.</h2>
+                <div class="btn wow fadeInUp" data-wow-delay="0.2s">
+                <a href="#hotove_programy" class="btn btn-border">Comparte</a>
+              </div>
+              </div>
+            </div> <br><br>
+      </div>
+
+      <div class="manuals-area">
+        <div class="container">
+          <div class="manuals">
+            <div class="manuals-text">
+              <p>Manuales</p>
+            </div>
+            <div class="manuals-picture">
+              <a href="https://github.com/tjbotcz/manuals"><img src="./files/img/book.svg"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+
+    <!-- KDO JSEM Start-->
+    <section class="section-container-brown" id="kdo_jsem">
+          <!-- Counter Item -->
+            <div >
+              <h1 class="section-title-white wow fadeInRight" data-wow-delay="0.3s">ACERCA DE MI</h1>
+              <br>
+              <span><h3>Soy un pequeño robot con inteligencia artificial.<br><br>
+                Estoy hecho con componentes fáciles de conseguir y mi código es abierto<br><br>
+                Nací en los laboratorios de IBM.<br><br>
+                Soy . . . TJBot.</h3></span>
+            </div>
+
+    </section>
+    <!-- KDO JSEM End-->
+
+    <!-- COUNTDOWN Start -->
+
+ <!--    <section class="section-container-ltbrown">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <h3 class="wow fadeInDown" data-wow-delay="0.2s">¿Desde cuando estoy en España?</h3>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="justify-content-center wow fadeInUp" data-wow-delay="0.2s">
+              <div id="clock" class="time-count"></div>
+            </div>
+          </div>
+    </section>-->
+    <!-- COUNTDOWN End -->
+
+     <!-- CO UMIM Start -->
+    <section id="co_umim" class="section-container">
+
+        <div class="row">
+          <div class="col-12">
+              <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">¿Qué puedo hacer?</h1>
+          </div>
+        </div>
+
+        <div class="row padding-sides">
+          <!-- CO UMIM item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="co-umim wow fadeInDown" data-wow-delay="0.2s">
+              <div class="icon">
+                <i class="material-icons">remove_red_eye</i>
+              </div>
+                <h3><a href="#">Puedo ver,</a></h3>
+                <p>gracias al<br>Servicio IBM Cloud Visual Recognition.</p>
+            </div>
+          </div>
+          <!-- CO UMIM item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="co-umim wow fadeInDown" data-wow-delay="0.4s">
+              <div class="icon">
+                <i class="material-icons">hearing</i>
+              </div>
+                <h3><a href="#">Escucho</a></h3>
+                <p>gracias al<br> Servicio de IBM Cloud Speech to Text.</p>
+            </div>
+          </div>
+          <!-- CO UMIM item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="co-umim wow fadeInDown" data-wow-delay="0.6s">
+              <div class="icon">
+                <i class="material-icons">record_voice_over</i>
+              </div>
+                <h3><a href="#">Puedo hablar,</a></h3>
+                <p>gracias a IBM Cloud Text to Speech <br>y Watson Assistant.</p>
+            </div>
+          </div>
+          <!-- CO UMIM item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="co-umim wow fadeInDown" data-wow-delay="0.8s">
+              <div class="icon">
+                <i class="material-icons">pan_tool</i>
+              </div>
+                <h3><a href="#">Saludo</a></h3>
+                <p>como</p>
+                <p>un bandido de un solo brazo.</p>
+            </div>
+          </div>
+           <!-- CO UMIM item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="co-umim wow fadeInDown" data-wow-delay="1s">
+              <div class="icon">
+                <i class="material-icons">wb_sunny</i>
+              </div>
+                <h3><a href="#">Brillo</a></h3>
+                <p>con</p>
+                <p>mi LED.</p>
+            </div>
+          </div>
+           <!-- CO UMIM item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="co-umim wow fadeInDown" data-wow-delay="1.2s">
+              <div class="icon">
+                <i class="material-icons">edit</i>
+              </div>
+                <h3><a href="#">Hago</a></h3>
+                <p>todo lo que me enseñes - así que date prisa,
+                <br> realiza otra fórmula</p>
+            </div>
+          </div>
+        </div>
+
+    </section>
+    <!-- CO UMIM End -->
+
+
+
+    <!-- HOTOVE PROGRAMY Start -->
+    <section id="hotove_programy" class="section-container">
+      <div class="container">
+
+          <div class="col-12">
+             <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Mis propuestas</h1>
+          </div>
+
+        <div class="row">
+          <!-- HOTOVE PROGRAMY item -->
+          <div class="col-xs-12 col-md-6 col-lg-4 padding-item">
+
+              <div class="hotove-programy">
+                <h3><a href="https://github.com/tjbotcz/tjbotcz_lite" target="_blank">TJBot CZ Lite</a></h3>
+                <p> Converso, reconozco las cosas y las personas que veo frente a mí y, por supuesto, hago gestos y brillo.</p>
+              </div>
+
+          </div>
+          <!-- HOTOVE PROGRAMY item -->
+          <div class="col-xs-12 col-md-6 col-lg-4 padding-item">
+
+              <div class="hotove-programy">
+                <h3><a href="#">TJBot CZ</a></h3>
+                <p>En la parte superior de la versión Lite, reconozco rostros, emociones y tengo un panel de control, una ventana de chat y estoy listo para conectarme a los dispositivos IoT a través de la plataforma Watson IoT.</p>
+              </div>
+
+          </div>
+          <!-- HOTOVE PROGRAMY item -->
+          <div class="col-xs-12 col-md-6 col-lg-4 padding-item">
+
+              <div class="hotove-programy">
+                <h3><a href="#">Tu propuesta</a></h3>
+                <p>Este espacio está reservado para tu fórmula</p>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- HOTOVE PROGRAMY End -->
+
+
+
+    <!-- JEDNA KRABICE Start-->
+    <section class="section-container-brown" id="jedna-krabice">
+
+
+          <!-- Counter Item -->
+
+            <!-- <div class="section-title-white wow fadeInRight" data-wow-delay="0.3s"> -->
+             <h2> ¡Una caja con todo!</h2><h3>¡No más componentes!</h3>
+
+
+
+
+    </section>
+    <!-- JEDNA KRABICE End-->
+
+    <!-- MOJE SOUPRAVA Start -->
+    <section id="moje_souprava" class="section-container">
+
+
+          <div class="col-12">
+
+              <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Mis Componentes</h1>
+
+          </div>
+        <div class="row padding-sides">
+          <!-- Moje souprava item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="moje-souprava">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/servo.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>Servo Motor 9g</h3>
+                <p>MOC &nbsp 120 Kč</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moje souprava item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="moje-souprava">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/r-pi.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                  <h3>Raspberry Pi 3 Model B</h3>
+                  <p>MOC &nbsp 1100 Kč</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moje souprava item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="moje-souprava">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/r-pi-adapter.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                  <h3>Raspberry Pi adapter</h3>
+                  <p>MOC &nbsp 315 Kč</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moje souprava item -->
+           <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="moje-souprava">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/r-pi-camera.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                  <h3>Raspberry Pi Camera V2</h3>
+                  <p>MOC &nbsp 900 Kč</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moje souprava item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="moje-souprava">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/ledka.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                  <h3>KY-016 rgb led</h3>
+                  <p>MOC &nbsp 30 Kč</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moje souprava item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="moje-souprava">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/8GB-sdhc.png" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>Micro SDHC 8gb</h3>
+                <p>MOC &nbsp 160 Kč</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moje souprava item -->
+           <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="moje-souprava">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/usb-mic.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>USB External Microphone</h3>
+                <p>MOC &nbsp 119 Kč</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moje souprava item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="moje-souprava">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/kabel-ff.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>DuPont cable F-F (4x)</h3>
+                <p>MOC &nbsp 8 Kč</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moje souprava item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="moje-souprava">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/kabel-mf.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>DuPont cable M-F (3x)</h3>
+                <p>MOC &nbsp 6 Kč</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moje souprava item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="moje-souprava">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/anker-nano-speaker.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>Anker Nano Speaker</h3>
+                <p>MOC &nbsp 500 Kč</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moje souprava item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="moje-souprava">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/krabice.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>box and packaging</h3>
+                <p>MOC &nbsp 15 Kč</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moje souprava item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="moje-souprava">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/karton.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>TJBot - lasercut body</h3>
+                <p>MOC &nbsp 240 Kč</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARDUINO-SHOP REKLAMA -->
+          <div class="row center">
+              <div class="col-12 padding-item">
+              <div class="arduinoshop">
+                  <div class="img-thumb">
+                    <a href="#"><img class="img-fluid" src="files/img/arduino-shop.png" alt=""></a>
+                  </div>
+                  <div class="overlay-box">
+                      <div class="icon">
+                          <a href="https://arduino-shop.cz/en/arduino/5018-tjbot-cz-kit.html"><i class="material-icons">shopping_cart</i></a>
+                          <h3>Buy in one go, and cheaper.</h3>
+                        </div>
+
+                    </div>
+              </div>
+
+          </div>
+    </section>
+    <!-- MOJE SOUPRAVA End -->
+
+
+    <!-- MOJI KAMARDI Start -->
+    <section id="moji_kamaradi">
+      <div class="section-container-ltbrown">
+
+              <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">MIS AMIGOS</h1>
+              <h3 class="wow fadeInDown" data-wow-delay="0.2s">Quienes me cuidan en España</h3>
+              <br>
+
+
+          <div class="col-12">
+            <div class="row">
+
+            <!-- MOJI KAMARADI Item Starts -->
+              <div class="kamaradi wow fadeInUp" data-wow-delay="0.2s">
+                <div class="team-img">
+                  <img class="img-fluid" src= "files/img/petnik.png" alt="">
+                </div>
+                <div class="kamarad">
+                  <h3><a href="#">JÍŘÍ PĚTNÍK</a></h3>
+                  <p>development</p>
+                </div>
+              </div>
+
+            <!-- MOJI KAMARADI Item Starts -->
+              <div class="kamaradi wow fadeInUp" data-wow-delay="0.4s">
+                <div class="team-img">
+                  <img class="img-fluid" src="files/img/louda.png" alt="">
+                </div>
+                <div class="kamarad">
+                  <h3><a href="#">JAN LOUDA</a></h3>
+                  <p>project management</p>
+                </div>
+              </div>
+
+
+
+            <!-- MOJI KAMARADI Item Starts -->
+              <div class="kamaradi wow fadeInUp" data-wow-delay="0.8s">
+                <div class="team-img">
+                  <img class="img-fluid" src="files/img/manuel.png" alt="">
+                </div>
+                <div class="kamarad">
+                  <h3><a href="#">Linette Manuel</a></h3>
+                  <p>promotion and community</p>
+                </div>
+              </div>
+
+            <!-- MOJI KAMARADI Item Starts -->
+            <div class="kamaradi wow fadeInUp" data-wow-delay="0.8s">
+              <div class="team-img">
+                <img class="img-fluid" src="files/img/dudova.png" alt="">
+              </div>
+              <div class="kamarad">
+                <h3><a href="#">Angelika Dudová</a></h3>
+                <p>marketing</p>
+              </div>
+            </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- MOJI KAMARADI End -->
+
+
+    <!-- SOCIAL KAMARADI Start-->
+    <section class="section-container-brown" id="social">
+          <div class="row center">
+              <div class="section-title-white wow fadeInRight" data-wow-delay="0.3s">
+                <span><h3>¡Conviertete en mi amigo tú también!</h3></span>
+              </div>
+          </div>
+          <div class="row center">
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/tjbotcz/"><i class="fab fa-linkedin"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="https://www.facebook.com/groups/tjbotcz"><i class="fab fa-facebook"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="https://github.com/tjbotcz"><i class="fab fa-github"></i></a>
+                </div>
+          </div>
+
+      </section>
+      <!-- SOCIAL KAMARADI End-->
+
+
+
+
+    <!-- OTAZKY Start -->
+    <section id="dotazy" class="section-container padding-sides">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title">
+              <h1 class="counter wow fadeInUp" data-wow-delay="0.2s">¿Qué más hay que decir?</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+            <div class="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <div class="header-title" data-toggle="collapse" data-target="#questionOne" aria-expanded="true" aria-controls="collapseOne">
+                     <p>Porqué me llamo TJ?</p>
+                  </div>
+                </div>
+                <div id="questionOne" class="collapse" aria-labelledby="headingOne" data-parent="#question">
+                  <div class="card-body">
+                  <p>Me pusieron el nombre del presidente más famoso de IBM, Thomase Johna Watsona, a.k.a. T.J. Watson.</p>
+                </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <div class="header-title" data-toggle="collapse" data-target="#questionTwo" aria-expanded="false" aria-controls="questionTwo">
+                     <p>¿Cómo construirlo?</p>
+                    </div>
+                </div>
+                <div id="questionTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#question">
+                  <div class="card-body">
+                    <p>Videos y tutoriales sobre cómo construirme están disponibles en <a href=https://github.com/tjbotcz/manuals/tree/master/en>Git</a>.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <div class="header-title" data-toggle="collapse" data-target="#questionThree" aria-expanded="false" aria-controls="questionThree">
+                    <p>¿Caminas?, ¿Podrías hacerlo?</p>
+                  </div>
+                </div>
+                <div id="questionThree" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                  <div class="card-body">
+                    <p>No camino, no. Sin embargo, puedes diseñar tu propio coche con ruedas, escribir tu propio código y compartirlo con otros para que puedan beneficiarse de mis movimientos :).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+            <div class="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne2">
+                  <div class="header-title" data-toggle="collapse" data-target="#questionOne2" aria-expanded="true" aria-controls="collapseOne">
+                    <p>¿Puedo transformarte?</p>
+                  </div>
+                </div>
+                <div id="questionOne2" class="collapse" aria-labelledby="headingOne" data-parent="#question">
+                  <div class="card-body">
+                    <p>Por supuesto. Y sería genial si compartes tus ajustes y cambios. Las primeras fórmulas básicas están en la sección. <a href=#hotove_programy>Mi fórmula. </a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo2">
+                    <div class="header-title" data-toggle="collapse" data-target="#questionTwo2" aria-expanded="false" aria-controls="questionTwo">
+                      <p>¿Puedo conectarlo a otros servicios?</p>
+                    </div>
+                </div>
+                <div id="questionTwo2" class="collapse" aria-labelledby="headingTwo" data-parent="#question">
+                  <div class="card-body">
+                    <p>Claro, puedes conectarlo a cualquier servicio con REST API o puedes programar la conectividad tu mismo. Las fórmulas básicas utilizan IBM Cloud debido y los servicios de Watson. También puedes mejorar TJBot con hardware adicional. El cielo es el límite...</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <div class="header-title" data-toggle="collapse" data-target="#questionFive" aria-expanded="false" aria-controls="questionFive">
+                    <p>¿Hay alguna versión Is there a 3D para imprimir?</p>
+                  </div>
+                </div>
+                <div id="questionFive" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                  <div class="card-body">
+                    <p>SI. Si dispones de una impresora 3D, puedes bajarte los modelos desde <a href=https://github.com/tjbotcz/body-files>Git</a>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- OTAZKY End -->
+
+
+
+    <!-- FORMULAR Start -->
+    <section class="section-container-ltbrown padding-sides" id="writeme">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="heading-count">
+                <h2 class="section-title wow fadeInDown" data-wow-delay="0.2s">¿Tienes alguna pregunta más? <br> ¡Estamos en contacto!</h2><br>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="formular">
+                <form action="https://formspree.io/xxxxxxxx@gmail.com"  method="POST">
+                  <label for="Surname">Tu nombre</label>
+                  <input class="surname" id="Surname" type="text" text="Surname" name="surname">
+                  <br>
+                  <label for="E-mail">Tu e-mail</label>
+                  <input class="email" id="Email" type="email" text="E-mail" name="email">
+                  <br>
+                  <label for="yourMessage">Tu mensaje</label>
+                  <textarea id="yourMessage" text="message" name="message"></textarea>
+                  <br>
+                  <button class="submit"><div class= "popisek">Enviar</div></button>
+                </form>
+              </div>
+            </div>
+      </section>
+      <!-- FORMULAR End -->
+
+<!--    <div id="copyright">
+      <div class="section-footer">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="site-info">
+              <p>© Designed and Developed by <a href="http://uideck.com" rel="nofollow">UIdeck</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="lni-chevron-up"></i>
+    </a>
+
+    <div id="preloader">
+      <div class="sk-circle">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="files/js/jquery-min.js"></script>
+    <script src="files/js/popper.min.js"></script>
+    <script src="files/js/bootstrap.min.js"></script>
+    <script src="files/js/jquery.countdown.min.js"></script>
+    <script src="files/js/jquery.nav.js"></script>
+    <script src="files/js/jquery.easing.min.js"></script>
+    <script src="files/js/wow.js"></script>
+    <script src="files/js/jquery.slicknav.js"></script>
+    <script src="files/js/nivo-lightbox.js"></script>
+    <script src="files/js/main.js"></script>
+  </body>
+</html>
