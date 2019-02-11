@@ -1,9 +1,9 @@
-# TJBot CZ - LITE VERSION
+# TJBot
 
-This is a program coded in Node.js for TJBotCZ.  It is a basic sample application that allows you to:
+This is a program coded in Node.js for TJBot.  It is a basic sample application that allows you to:
 * run pre-prepared conversation
-* control RGB light on TJBotCZ's head
-* control TJBotCZ's arm
+* control RGB light on TJBot's head
+* control TJBot's arm
 * use camera to take a picture and analyze it
 
 
