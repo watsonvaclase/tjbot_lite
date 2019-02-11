@@ -1,0 +1,25 @@
+{
+  "name": "tjbotcz_lite",
+  "description": "Lite version of Czech TJBot with conversation, visual recognition, and simple RGB diode",
+  "version": "0.0.1",
+  "author": {
+    "name": "tjbotcz",
+    "email": "tjbotcz@gmail.com"
+  },
+  "dependencies": {
+    "tjbotczlib": "latest"
+  },
+  "main": "tjbotcz_lite.js",
+  "homepage": "https://github.com/tjbotcz/tjbotcz_lite",
+  "keywords": [
+    "tjbotcz", "tjbot"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjbotcz/tjbotcz_lite.git"
+  },
+  "scripts": {
+    "start": "node tjbotcz_lite.js"
+  }
+}
