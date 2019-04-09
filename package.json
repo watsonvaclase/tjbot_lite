@@ -7,6 +7,11 @@
     "email": "tjbotcz@gmail.com"
   },
   "dependencies": {
+    "lcdi2c": "~1.0.6",
+    "espeak": "~0.0.3",
+    "ip": "~1.1.5",
+    "body-parser": "~1.0.1",
+    "express": "~4.0.0",
     "tjbotczlib": "latest"
   },
   "main": "tjbotcz_lite.js",

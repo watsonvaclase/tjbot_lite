@@ -14,8 +14,10 @@ exports.credentials = {};
 // Watson Assistant
 // https://www.ibm.com/watson/ai-assistant/
 exports.credentials.assistant = {
-	password: '',
-	username: ''
+	//password: '',
+	//username: ''
+	iam_apikey: '',
+	url: ''
 };
 
 // Watson Speech to Text
@@ -44,3 +46,27 @@ exports.credentials.visual_recognition = {
 	//api_key: '', //for older service instances created before May 23, 2018 
 	iam_apikey: ''
 };
+
+/* 
+// Watson Tone Analyzer
+//For older instances use password/usrername fields instead of iam_apikey
+// https://www.ibm.com/watson/services/tone-analyzer
+exports.credentials.tone_analyzer = {
+	//password: '',
+	//username: ''
+	iam_apikey: '',
+	url: ''
+};
+ */
+
+ /* 
+// Watson Language Translator
+//For older instances use password/usrername fields instead of iam_apikey
+// https://www.ibm.com/watson/services/language-translator
+exports.credentials.language_translator = {
+	//password: '',
+	//username: ''
+	iam_apikey: '',
+	url: ''
+};
+ */
