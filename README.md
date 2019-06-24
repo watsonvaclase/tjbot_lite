@@ -1,6 +1,6 @@
 # TJBot LITE VERSION
 
-Este ejerdicio cofificado en Node.js permite:
+En este ejercicio codificado en Node.js permite:
 * ejecutar con conversación previamente preparada con el servicio de Watson assistant
 * controlar un led RGB light situado en la cabez TJBot
 * controlar el brazo de TJBot
