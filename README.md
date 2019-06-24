@@ -1,16 +1,15 @@
-# TJBot CZ - LITE VERSION
+# TJBot LITE VERSION
 
-This is a program coded in Node.js for TJBotCZ.  It is a basic sample application that allows you to:
-* run pre-prepared conversation
-* control RGB light on TJBotCZ's head
-* control TJBotCZ's arm
-* use camera to take a picture and analyze it
-
-
-_Note: TJBot's name is Michael, unless you change it in config.js file. So when you speek to TJBot, use "Michael" in your sentence. Only then will he process the sentence._
+Este ejerdicio cofificado en Node.js permite:
+* ejecutar con conversación previamente preparada con el servicio de Watson assistant
+* controlar un led RGB light situado en la cabez TJBot
+* controlar el brazo de TJBot
+* usar la cámara para tomar una imagen y analizarla
 
 
-To create your own conversation dialogs we recommend to visit one of these free tutorials:
+_Nota: El de TJBot es Michael, a no ser que cambies el fichero config.js. Por lo tanto tienes que llamarle "Michael" antes de comezcar a hablarle. Sólo así se procesará la frase.
+
+Para crear tu propia diálogo de conversación recomentamos visitar uno de estos tutoriales gratuitos:
 
 [How to build a chatbot](https://cognitiveclass.ai/courses/how-to-build-a-chatbot/)
 
